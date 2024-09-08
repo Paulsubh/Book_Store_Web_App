@@ -1,0 +1,14 @@
+{
+    "compilerOptions": {
+      "target": "ES6",
+      "module": "ESNext",
+      "jsx": "react-jsx", // Enable JSX support for JavaScript
+      "baseUrl": "./src", // Allows absolute imports
+      "paths": {
+        "@components/*": ["components/*"], // Example alias setup for components folder
+        "@assets/*": ["assets/*"] // Example alias setup for assets folder
+      }
+    },
+    "include": ["src/**/*"], // Include all files in the src folder
+    "exclude": ["node_modules", "dist"] // Exclude node_modules and dist
+  }  
