@@ -6,12 +6,12 @@ import Footer from '../components/Footer'
 
 function home() {
     return (
-    <>
-        <Navbar/>
-        <Banner/>
-        <FreeBook/>
-        <Footer/>
-    </>
+        <>
+            <div className="py-5"><Navbar /></div>
+            <div className='min-h-screen'><Banner />
+            <FreeBook /></div>
+            <Footer />
+        </>
     )
 }
 
