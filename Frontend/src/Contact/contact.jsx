@@ -9,7 +9,7 @@ export default function contact() {
 
             <div className="py-1.5"><Navbar /></div>
 
-            <div className='min-h-screen'><Contact /></div>
+            <div className='min-h-screen'><Contact/></div>
 
             <Footer />
         </>

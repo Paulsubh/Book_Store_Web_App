@@ -1,20 +1,46 @@
 import React from 'react'
 import { useForm } from "react-hook-form"
+import Swal from 'sweetalert2'
 function Contact() {
+  const onSubmit = async (event) => {
+    event.preventDefault();
+    const formData = new FormData(event.target);
+
+    formData.append("access_key", "375cf96d-a863-48c6-af41-bb1a7c761ea4");
+
+    const object = Object.fromEntries(formData);
+    const json = JSON.stringify(object);
+
+    const res = await fetch("https://api.web3forms.com/submit", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+        Accept: "application/json"
+      },
+      body: json
+    }).then((res) => res.json());
+
+    if (res.success) {
+      Swal.fire({
+        title: "Good job!",
+        text: "You clicked the button!",
+        icon: "success",
+        timer:500
+      });
+    }
+  };
   const {
     register,
     handleSubmit,
     formState: { errors },
-  } = useForm()
-
-  const onSubmit = (data) => console.log(data)
+} = useForm()
 
   return (
     <>
       <div className="flex h-screen items-center justify-center text-pretty">
         <div className="items-center ml-10 md:w-[600px]">
           <div className="modal-box">
-            <form onSubmit={handleSubmit(onSubmit)} method="dialog">
+            <form onSubmit={onSubmit} method="dialog">
               <h3 className="font-bold text-2xl text-center dark:text-black">Contact Us</h3>
               {/* Email */}
               <div className="mt-5 space-y-2 dark:text-black">

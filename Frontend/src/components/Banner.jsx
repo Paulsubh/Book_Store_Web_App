@@ -29,7 +29,7 @@ function Banner() {
             <input type="text" className="grow text-slate-800" placeholder="Email" />
           </label>
         </div>
-        <button className="btn mt-6 btn btn-accent">Secondary</button>
+        <button className="btn mt-6 btn btn-accent">Get started</button>
       </div>
 
       <div className='order-1 w-full md-w-1/2'>
