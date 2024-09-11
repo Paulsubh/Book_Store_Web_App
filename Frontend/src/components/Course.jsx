@@ -8,7 +8,7 @@ function Course() {
     useEffect(()=>{
         const getBook=async()=>{
             try{
-                const res=await axios.get("https://your-backend-url.onrender.com/books");
+                const res=await axios.get("http://sp-bookhub.netlify.app/books");
                 console.log(res.data)
                 setBook(res.data)
             }catch(error){
