@@ -23,7 +23,7 @@ function Signup() {
             email: data.email,
             password: data.password,
         }
-        await axios.post("http://localhost:5001/user/signup", userInfo)
+        await axios.post("https://sp-bookhub.onrender.com/user/signup", userInfo)
             .then((res) => {
                 console.log(res.data)
                 if (res.data) {
