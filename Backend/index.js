@@ -19,10 +19,7 @@ const URI = process.env.MongoDBURI
 
 //connect to mongoDB
 try {
-    mongoose.connect(URI, {
-        useNewUrlParser: true,
-        useUnifiedTopology: true,
-    });
+    mongoose.connect(process.env.MONGODB_URI)
     console.log("Connected to the Database")
 } catch (error) {
     console.log("Error:", error);
