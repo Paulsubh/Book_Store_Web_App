@@ -23,7 +23,7 @@ function Signup() {
             email: data.email,
             password: data.password,
         }
-        await axios.post("https://book-store-web-app-vmh8.onrender.com/user/signup", userInfo)
+        await axios.post("https://book-store-web-app-omega.vercel.app/user/signup", userInfo)
             .then((res) => {
                 console.log(res.data)
                 if (res.data) {
